@@ -1,0 +1,11 @@
+alias gitm='git checkout master'
+alias gitb='git checkout futzig'
+alias gitmm='git merge master'
+alias gitmb='git merge futzig'
+alias android-connect="jmtpfs -o allow_other ~/Android"
+alias android-disconnect="fusermount -u ~/Android"
+alias ..='cd ..'
+alias myip='curl http://tnx.nl/ip && echo'
+alias set_debug='source ~/Tools/debug.source'
+alias set_release='source ~/Tools/release.source'
+alias apt-get='please apt-get'
