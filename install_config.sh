@@ -16,3 +16,5 @@ for file in $FILELIST; do
 	ln -sf $CURDIR/$file ~/.$file
 done
 
+. ~/.bashrc
+
