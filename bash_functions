@@ -8,7 +8,7 @@ cd() {
 		elif [ "$BR2" == "bromo" ]; then
 			branch=$BR2
 		else
-			branch=$(pwd | sed 's|.*buildroot/platinabrcm-branch-\([^/]*\).*|\1|')
+			branch=$(pwd | sed 's|.*buildroot/\([^-]*\)-branch-\([^/]*\).*|\1-\2|')
 		fi
 		PS1='${debian_chroot:+($debian_chroot)}\h:\[\e[01;33m\]\W\[\e[m\] \[\e[01;32m\]\u\[\e[m\] \[\e[01;34m\][$branch]\[\e[m\] \$ '
 	else

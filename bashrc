@@ -61,13 +61,13 @@ fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|*rxvt*)
+#case "$TERM" in
+#xterm*|*rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+#    ;;
+#*)
+#    ;;
+#esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -114,7 +114,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Enable 256-color on rxvt terminal
-export TERM=rxvt-256color
+case "$TERM" in
+*rxvt*)
+    export TERM=rxvt-256color
+    ;;
+esac
 
 # Configure email
 export EMAIL=futzig@PARKS.com.br
