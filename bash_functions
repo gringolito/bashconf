@@ -72,3 +72,16 @@ function settitle() {
 function f() {
 	find -name "$1" -exec gvim '{}' \;
 }
+
+function update() {
+	apt-get update && apt-get dist-upgrade
+}
+
+function br2() {
+	if [[ "$1" = "" ]]; then
+		cd $HOME/Projects/buildroot/real_trunk
+	else
+		cd $HOME/Projects/buildroot/$1
+	fi
+}
+

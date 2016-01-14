@@ -111,6 +111,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
     complete -F _sudo please
     complete -F _make makedeploy
+    _completion_loader sudo
+    _completion_loader make
 fi
 
 # Enable 256-color on rxvt terminal
