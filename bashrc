@@ -139,3 +139,5 @@ if [ -f ~/.paths ]; then
     . ~/.paths
 fi
 
+exit 0
+
